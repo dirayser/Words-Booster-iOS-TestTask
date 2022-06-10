@@ -22,6 +22,7 @@ extension UIImageView {
                 
                 return
             }
+            URLCache.shared.removeAllCachedResponses()
             DispatchQueue.main.async() { [weak self] in
                 completion?(true)
                 self?.image = image

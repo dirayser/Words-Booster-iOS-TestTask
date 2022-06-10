@@ -39,6 +39,14 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         }
         
         layer.cornerRadius = 6
+        addShadow()
+    }
+    
+    private func addShadow() {
+        layer.shadowOffset = CGSize(width: 0,
+                                          height: 10)
+        layer.shadowRadius = 5
+        layer.shadowOpacity = 0.3
     }
     
     private func showComingSoonFlow() {

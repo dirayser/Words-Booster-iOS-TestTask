@@ -9,7 +9,6 @@ import UIKit
 
 class CategoriesListViewController: UIViewController {
     
-    // @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var collectionView: UICollectionView!
     
     private let categoriesListViewModel = CategoriesListViewModel()
@@ -17,6 +16,7 @@ class CategoriesListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         
         categories = categoriesListViewModel.loadJson()
         
@@ -43,7 +43,9 @@ extension CategoriesListViewController: UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        print("Tap")
+        guard let category = categories?[indexPath.section] else { return }
+        
+        categoriesListViewModel.loadCategoryIfPossible(category)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

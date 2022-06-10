@@ -11,6 +11,8 @@ class CategoriesListViewModel {
     
     private let jsonFileName = "ios-challenge-words-booster"
     
+    private let router = CategoriesListRouter()
+    
     func loadJson() -> [Category]? {
         if let url = Bundle.main.url(forResource: jsonFileName, withExtension: "json") {
             do {
@@ -24,6 +26,10 @@ class CategoriesListViewModel {
             }
         }
         return nil
+    }
+    
+    func loadCategoryIfPossible(_ category: Category) {
+        router.startFactsFlow(for: category)
     }
     
 }
