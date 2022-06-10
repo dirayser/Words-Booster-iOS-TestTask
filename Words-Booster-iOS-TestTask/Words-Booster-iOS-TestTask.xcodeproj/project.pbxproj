@@ -17,6 +17,10 @@
 		6A1150372853279200FDEA42 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A1150362853279200FDEA42 /* Colors.xcassets */; };
 		6A11503B2853282000FDEA42 /* CategoriesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11503A2853282000FDEA42 /* CategoriesListViewModel.swift */; };
 		6A11503F285328C100FDEA42 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11503E285328C100FDEA42 /* Fact.swift */; };
+		6A1150472853312700FDEA42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A1150462853312700FDEA42 /* Assets.xcassets */; };
+		6A11504A2853344A00FDEA42 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1150492853344A00FDEA42 /* UIImageView+Extensions.swift */; };
+		6A11504F28533AFF00FDEA42 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11504D28533AFF00FDEA42 /* CategoryCollectionViewCell.swift */; };
+		6A11505028533AFF00FDEA42 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A11504E28533AFF00FDEA42 /* CategoryCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		6A1150362853279200FDEA42 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		6A11503A2853282000FDEA42 /* CategoriesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListViewModel.swift; sourceTree = "<group>"; };
 		6A11503E285328C100FDEA42 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		6A1150462853312700FDEA42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A1150492853344A00FDEA42 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		6A11504D28533AFF00FDEA42 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		6A11504E28533AFF00FDEA42 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,7 @@
 		6A115033285325E200FDEA42 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				6A115051285344C800FDEA42 /* Facts */,
 				6A1150342853260700FDEA42 /* Categories List */,
 			);
 			path = Scenes;
@@ -96,6 +105,7 @@
 				6A1150382853280200FDEA42 /* UI */,
 				6A1150392853280C00FDEA42 /* Models */,
 				6A11503C2853284300FDEA42 /* Value Objects */,
+				6A1150482853342D00FDEA42 /* Extensions */,
 				6A11503D2853286900FDEA42 /* Resources */,
 			);
 			path = "Categories List";
@@ -113,8 +123,8 @@
 		6A1150382853280200FDEA42 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				6A1150202853242E00FDEA42 /* CategoriesListViewController.swift */,
-				6A1150222853242E00FDEA42 /* CategoriesListViewController.storyboard */,
+				6A11504128532F7C00FDEA42 /* Cells */,
+				6A11504028532E1D00FDEA42 /* View Controllers */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -139,8 +149,58 @@
 			isa = PBXGroup;
 			children = (
 				6A1150312853248100FDEA42 /* ios-challenge-words-booster.json */,
+				6A1150462853312700FDEA42 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		6A11504028532E1D00FDEA42 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6A1150202853242E00FDEA42 /* CategoriesListViewController.swift */,
+				6A1150222853242E00FDEA42 /* CategoriesListViewController.storyboard */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		6A11504128532F7C00FDEA42 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6A11504D28533AFF00FDEA42 /* CategoryCollectionViewCell.swift */,
+				6A11504E28533AFF00FDEA42 /* CategoryCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		6A1150482853342D00FDEA42 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6A1150492853344A00FDEA42 /* UIImageView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6A115051285344C800FDEA42 /* Facts */ = {
+			isa = PBXGroup;
+			children = (
+				6A115052285344D200FDEA42 /* UI */,
+			);
+			path = Facts;
+			sourceTree = "<group>";
+		};
+		6A115052285344D200FDEA42 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6A115053285344D700FDEA42 /* View Controllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6A115053285344D700FDEA42 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +264,8 @@
 				6A1150372853279200FDEA42 /* Colors.xcassets in Resources */,
 				6A1150322853248100FDEA42 /* ios-challenge-words-booster.json in Resources */,
 				6A1150292853243700FDEA42 /* LaunchScreen.storyboard in Resources */,
+				6A11505028533AFF00FDEA42 /* CategoryCollectionViewCell.xib in Resources */,
+				6A1150472853312700FDEA42 /* Assets.xcassets in Resources */,
 				6A1150262853243700FDEA42 /* Icon.xcassets in Resources */,
 				6A1150242853242E00FDEA42 /* CategoriesListViewController.storyboard in Resources */,
 			);
@@ -216,7 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A11504F28533AFF00FDEA42 /* CategoryCollectionViewCell.swift in Sources */,
 				6A1150212853242E00FDEA42 /* CategoriesListViewController.swift in Sources */,
+				6A11504A2853344A00FDEA42 /* UIImageView+Extensions.swift in Sources */,
 				6A11501D2853242E00FDEA42 /* AppDelegate.swift in Sources */,
 				6A11503F285328C100FDEA42 /* Fact.swift in Sources */,
 				6A11503B2853282000FDEA42 /* CategoriesListViewModel.swift in Sources */,

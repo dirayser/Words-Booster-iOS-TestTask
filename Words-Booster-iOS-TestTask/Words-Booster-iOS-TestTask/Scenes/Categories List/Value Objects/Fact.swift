@@ -10,7 +10,7 @@ import Foundation
 struct Fact: Decodable {
     
     let fact: String
-    let image: String
+    let image: URL
     
 }
 
@@ -18,9 +18,16 @@ struct Category: Decodable {
     
     let title: String
     let description: String
-    let image: String
+    let image: URL
     let order: Int
-    let status: String
+    let status: CategoryStatus
     let content: [Fact]?
+    
+}
+
+enum CategoryStatus: String, Decodable {
+    
+    case paid
+    case free
     
 }

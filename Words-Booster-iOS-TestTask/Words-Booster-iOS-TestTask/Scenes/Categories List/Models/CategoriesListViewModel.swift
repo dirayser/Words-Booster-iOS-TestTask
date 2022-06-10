@@ -16,9 +16,9 @@ class CategoriesListViewModel {
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
-                let jsonData = try decoder.decode([Category].self, from: data)
+                let categories = try decoder.decode([Category].self, from: data)
                 
-                return jsonData
+                return categories.sorted(by: { $0.order < $1.order })
             } catch {
                 print("error:\(error)")
             }
